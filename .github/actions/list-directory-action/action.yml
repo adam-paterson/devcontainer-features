@@ -1,0 +1,21 @@
+name: 'List directories'
+descriotion: 'Get a json list of the directories listed in the specified directory'
+inputs:
+  path:
+    description: 'Directory to list',
+    required: true
+outputs:
+  directories:
+    description: 'a JSON formatted list of directories',
+    value: ${{ steps.set-directories.outputs.directories}}
+runs:
+  using: 'composite',
+  steps:
+    - run: sudo apt update && sudo apt install tree jq -y
+      shell: bash
+    - id: set-directories
+      shell: bash
+      run: |
+        cd ${{ inputs.path }}
+        directories=$(sudo tree -J -d -L 1 | sudo jq -c '.[0].contents | map(.name)')
+        echo "directories=$directories" >> $GITHUB_OUTPUT
