@@ -1,8 +1,16 @@
 {
-    "test": {
+    "latest": {
         "image": "mcr.microsoft.com/devcontainers/base:debian",
         "features": {
             "magerun2": {}
+        }
+    },
+    "specific-version": {
+        "image": "mcr.microsoft.com/devcontainers/base:debian",
+        "features": {
+            "magerun2": {
+                "version": "5.0.2"
+            }
         }
     }
 }

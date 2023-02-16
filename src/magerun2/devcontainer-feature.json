@@ -2,8 +2,8 @@
     "id": "magerun2",
     "version": "1.0.0",
     "name": "magerun2",
-    "documentationURL": "https://github.com/adam-paterson/devcontainers-features/tree/main/magerun",
-    "description": "Magento 2 CLI",
+    "documentationURL": "https://github.com/adam-paterson/devcontainers-features/tree/main/magerun2",
+    "description": "Adobe Commerce CLI utility",
     "options": {
         "version": {
             "default": "latest",
@@ -13,8 +13,5 @@
             ],
             "type": "string"
         }
-    },
-    "installsAfter": [
-        "ghcr.io/devcontainers-contrib/features/wget-apt-get"
-    ]
+    }
 }
