@@ -1,0 +1,37 @@
+{
+    "id": "magerun2",
+    "version": "1.0.0",
+    "name": "magerun2",
+    "description": "Magento 2 CLI",
+    "documentationURL": "https://github.com/adam-paterson/devcontainers-features/tree/main/magerun",
+    "options": {
+        "version": {
+            "description": "Magerun Version",
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ]
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers-contrib/features/wget-apt-get"
+    ],
+    "dependencies": [
+        {
+            "feature": "ghcr.io/devcontainers-contrib/features/wget-apt-get:1.0.5",
+            "options": {}
+        }
+    ],
+    "install_command": "echo 'Done!'",
+    "test_scenarios": [
+        {
+            "name": "test",
+            "image": "mcr.microsoft.com/devcontainers/base:debian",
+            "test_commands": [
+                "magerun --version"
+            ],
+            "options": {}
+        }
+    ]
+}
