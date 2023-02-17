@@ -1,0 +1,47 @@
+{
+    "id": "magerun",
+    "version": "1.0.0",
+    "name": "magerun",
+    "description": "Magento CLI utility",
+    "documentationURL": "https://github.com/adam-paterson/devcontainers-features/tree/main/magerun",
+    "options": {
+        "version": {
+            "description": "Magerun Version",
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ]
+        }
+    },
+    "dependencies": [
+        {
+            "feature": "ghcr.io/devcontainers/features/php:latest",
+            "options": {
+                "version": "7.3",
+                "installComposer": false
+            }
+        }
+    ],
+    "install_command": "echo 'Done!'",
+    "test_scenarios": [
+        {
+            "name": "latest",
+            "image": "mcr.microsoft.com/devcontainers/base:debian",
+            "test_commands": [
+                "magerun --version"
+            ],
+            "options": {}
+        },
+        {
+            "name": "specific-version",
+            "image": "mcr.microsoft.com/devcontainers/base:debian",
+            "test_commands": [
+                "magerun --version"
+            ],
+            "options": {
+                "version": "1.97.28"
+            }
+        }
+    ]
+}

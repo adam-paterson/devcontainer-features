@@ -1,0 +1,17 @@
+{
+    "id": "magerun",
+    "version": "1.0.0",
+    "name": "magerun",
+    "documentationURL": "https://github.com/adam-paterson/devcontainers-features/tree/main/magerun",
+    "description": "Magento CLI utility",
+    "options": {
+        "version": {
+            "default": "latest",
+            "description": "Magerun Version",
+            "proposals": [
+                "latest"
+            ],
+            "type": "string"
+        }
+    }
+}
