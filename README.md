@@ -6,7 +6,7 @@
 A selection of additional <a href="https://github.com/devcontainers">@devcontainer</a> features
 </h4>
 <p align="center">
-<img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/adam-paterson/devcontainer-features/release.yml?style=for-the-badge">
+<img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/adam-paterson/devcontainer-features/test.yml?style=for-the-badge">
 </p>
 
 <h4 align="center">
